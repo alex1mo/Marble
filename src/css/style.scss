@@ -1,6 +1,14 @@
 @import "_normalize";
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 $f-f: "Roboto Condensed", sans-serif;
+@mixin flex-center($f-d: row, $j-c: center, $a-i: center) {
+  display: flex;
+  flex-direction: $f-d;
+  justify-content: $j-c;
+  align-items: $a-i;
+}
 
 body {
   width: 1600px;
@@ -8,3 +16,4 @@ body {
 }
 
 @import "header";
+@import "section.slider";
