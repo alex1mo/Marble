@@ -21,7 +21,10 @@ header {
     line-height: 35px;
     padding-left: 0;
     padding-right: 216px;
-    a:hover {
+    > a {
+      padding: 0 10px;
+    }
+    > a:hover {
       color: #1abb9c;
     }
   }

@@ -143,8 +143,7 @@ input {
   src: url(../fonts/Nexa_Light.otf)
 } */
 body {
-  width: 1600px;
-  height: 100vh; }
+  width: 100%; }
 
 header {
   background-color: #e5e5e5;
@@ -167,7 +166,9 @@ header {
     line-height: 35px;
     padding-left: 0;
     padding-right: 216px; }
-    header > :last-child a:hover {
+    header > :last-child > a {
+      padding: 0 10px; }
+    header > :last-child > a:hover {
       color: #1abb9c; }
 
 .slider {
@@ -179,7 +180,7 @@ header {
   height: 600px;
   background: url(../img/banner.jpg) no-repeat; }
   .slider > :nth-child(1), .slider > :nth-child(2) {
-    font-family: RobotoSlab;
+    font-family: "Roboto Slab", sans-serif;
     color: #f3f3f3;
     font-size: 40px;
     font-weight: 700;
@@ -199,8 +200,9 @@ header {
     background-color: #3f8dbf;
     width: 140px;
     height: 45px;
-    padding: 0; }
-    .slider > :nth-child(3) > span {
+    padding: 0;
+    box-shadow: 0 4px 0px 0px #3177a3; }
+    .slider > :nth-child(3) > span > a {
       font-family: "Roboto", sans-serif;
       color: rgba(255, 255, 255, 0.8);
       font-size: 14px;
