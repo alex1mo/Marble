@@ -1,8 +1,10 @@
-@import "style1.scss";
+@import "_normalize";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+$f-f: "Roboto Condensed", sans-serif;
+
 body {
-  background: white;
+  width: 1600px;
+  height: 100vh;
 }
 
-header {
-  background: green;
-}
+@import "header";
