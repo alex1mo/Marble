@@ -15,6 +15,7 @@ h4,
 h5,
 h6,
 p,
+footer > div > div > ul,
 blockquote,
 pre,
 a,
@@ -142,8 +143,20 @@ input {
   font-family: 'NNexaLight';
   src: url(../fonts/Nexa_Light.otf)
 } */
+html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 body {
-  width: 100%; }
+  width: 100%;
+  max-width: 1600px;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 header {
   background-color: #e5e5e5;
@@ -152,7 +165,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  header > :first-child, header > :last-child {
+  header > div:first-child, header > div:last-child {
     font-family: "Roboto Condensed", sans-serif;
     color: #4e4e4e;
     font-size: 40px;
@@ -161,14 +174,14 @@ header {
     text-align: left;
     text-transform: uppercase;
     padding-left: 215px; }
-  header > :last-child {
+  header > div:last-child {
     font-size: 16px;
     line-height: 35px;
     padding-left: 0;
     padding-right: 216px; }
-    header > :last-child > a {
+    header > div:last-child > a {
       padding: 0 10px; }
-    header > :last-child > a:hover {
+    header > div:last-child > a:hover {
       color: #1abb9c; }
 
 .slider {
@@ -179,19 +192,19 @@ header {
   width: 100%;
   height: 600px;
   background: url(../img/banner.jpg) no-repeat; }
-  .slider > :nth-child(1), .slider > :nth-child(2) {
+  .slider > div:nth-child(1), .slider > div:nth-child(2) {
     font-family: "Roboto Slab", sans-serif;
     color: #f3f3f3;
     font-size: 40px;
     font-weight: 700;
     line-height: 35px;
     text-align: center; }
-  .slider > :nth-child(2) {
+  .slider > div:nth-child(2) {
     color: #a8a8a8;
     font-size: 32px;
     font-family: "Roboto Slab", sans-serif;
     padding: 43px 0; }
-  .slider > :nth-child(3) {
+  .slider > div:nth-child(3) {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -202,10 +215,181 @@ header {
     height: 45px;
     padding: 0;
     box-shadow: 0 4px 0px 0px #3177a3; }
-    .slider > :nth-child(3) > span > a {
+    .slider > div:nth-child(3) > span > a {
       font-family: "Roboto", sans-serif;
       color: rgba(255, 255, 255, 0.8);
       font-size: 14px;
       line-height: 14px;
       text-align: left;
       text-transform: uppercase; }
+
+main {
+  width: 73%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  main > .service {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    main > .service > div {
+      padding: 0 27px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      main > .service > div > span {
+        font-family: "Roboto Slab", sans-serif;
+        color: #4e4e4e;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center; }
+      main > .service > div > p {
+        font-family: "Roboto", sans-serif;
+        color: #616161;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center; }
+  main > .separator {
+    background-color: rgba(0, 0, 0, 0.11);
+    width: 100%;
+    height: 2px; }
+  main > .latest-works {
+    width: 100%;
+    padding: 60px 0; }
+    main > .latest-works > span {
+      font-family: "Roboto Condensed";
+      color: #4e4e4e;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 35px;
+      text-align: left;
+      text-transform: uppercase; }
+    main > .latest-works > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center; }
+      main > .latest-works > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 380px;
+        padding: 0 calc(15px / 2); }
+        main > .latest-works > div > div > img {
+          width: 100%;
+          height: 100%;
+          padding: 25px 0; }
+        main > .latest-works > div > div > .css-67 {
+          font-family: "Roboto Condensed";
+          color: #4e4e4e;
+          font-size: 18px;
+          font-weight: 700;
+          text-align: left; }
+        main > .latest-works > div > div > .css-68 {
+          font-family: "Roboto Condensed";
+          color: #a8a8a8;
+          font-size: 13px;
+          font-weight: 400;
+          padding-top: 14px;
+          padding-bottom: 23px; }
+        main > .latest-works > div > div > .css-69 {
+          font-family: "Roboto";
+          color: #5c5c5c;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 28px;
+          text-align: left; }
+  main > .testimanial {
+    background-color: rgba(0, 0, 0, 0.03);
+    width: 137%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main > .testimanial > span {
+      color: #dcdcdc;
+      font-size: 100px;
+      font-weight: 400;
+      height: 70px; }
+    main > .testimanial > p {
+      width: 55%;
+      font-family: "Roboto Slab";
+      color: #a1a1a1;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center; }
+
+footer {
+  background: url(../img/Footer_Bg.png);
+  width: 100%;
+  height: 459px;
+  padding: 50px 215px; }
+  footer > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; }
+    footer > div > div > span {
+      font-family: "Roboto Condensed";
+      color: #6c6c6c;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      text-align: left;
+      text-transform: uppercase; }
+    footer > div > div > p, footer > div > div > ul {
+      font-family: "Roboto";
+      color: #cacaca;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: left;
+      padding: 14px 0; }
+    footer > div > div > ul {
+      padding: 0; }
+    footer > div > div:first-child {
+      padding-right: 71px; }
+      footer > div > div:first-child > p, footer > div > div:first-child > ul {
+        width: 255px; }
+      footer > div > div:first-child > ul {
+        width: 177px; }
+        footer > div > div:first-child > ul > li:nth-child(1) {
+          list-style-image: url(../img/address.png); }
+        footer > div > div:first-child > ul > li:nth-child(2) {
+          list-style-image: url(../img/phone.png); }
+        footer > div > div:first-child > ul > li:nth-child(3) {
+          list-style-image: url(../img/mail.png); }
+    footer > div > div:nth-child(2) {
+      padding-right: 57px; }
+      footer > div > div:nth-child(2) > ul {
+        list-style-image: url(../img/twitter.png);
+        margin-left: 20px; }
+        footer > div > div:nth-child(2) > ul > li {
+          width: 222px;
+          padding: 14px 0; }
+    footer > div > div:nth-child(3) > p, footer > div > div:nth-child(3) > ul {
+      width: 206px; }
+    footer > div > div:nth-child(4) {
+      padding-left: 98px; }
+      footer > div > div:nth-child(4) > p, footer > div > div:nth-child(4) > ul {
+        width: 247px; }
+  footer > div:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.11);
+    height: 2px;
+    margin: 30px 0; }
+  footer > p {
+    font-family: "Roboto";
+    color: #cacaca;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left; }

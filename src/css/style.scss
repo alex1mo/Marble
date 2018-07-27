@@ -1,8 +1,13 @@
-@import "_normalize";
+// ............Шрифты...............
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+//............Переменные..............
 $f-f: "Roboto Condensed", sans-serif;
+//....................................
+
+//...........миксины..................
 @mixin flex-center($f-d: row, $j-c: center, $a-i: center) {
   display: flex;
   flex-direction: $f-d;
@@ -10,9 +15,22 @@ $f-f: "Roboto Condensed", sans-serif;
   align-items: $a-i;
 }
 
-body {
-  width: 100%;
+//.................................
+@import "_normalize";
+
+html {
+  @include flex-center(column);
 }
 
+body {
+  width: 100%;
+  max-width: 1600px;
+  background: #f7f7f7;
+  @include flex-center(column);
+}
+
+//............Стили.................
 @import "header";
-@import "section.slider";
+@import "section-slider";
+@import "main";
+@import "_footer";
